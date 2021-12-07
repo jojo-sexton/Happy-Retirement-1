@@ -27,14 +27,25 @@ const Lifestyle = ({ addLifestyle, plan }) => {
       <ul>
         {lifestyles.map(lifestyle => {
           const { choice, spend } = lifestyle
+          const spanClass = plan.lifestyle === lifestyle.spend ? 'active' : ''
           return (
-            <li key={lifestyle.spend}>
-              {choice}{`:  $${spend} per week`}
+            <li key={lifestyle.spend} onClick={() => addLifestyle(spend)}>
+              <span className={spanClass}>
+                {choice}{`:  $${spend} per week`}
+              </span>
             </li>
           )
         })}
       </ul>
 
+
+      <div>
+        <Link to="/savings">
+          <button>
+              Next step
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }
