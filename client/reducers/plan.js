@@ -1,10 +1,9 @@
 const emptyPlan = {
-  lifeStyle: NaN,
-  savgNow: NaN,
-  savgAdd: NaN,
+  lifestyle: NaN,
+  saving: NaN,
+  contribution: NaN,
   interest: NaN,
   tax: NaN,
-  effectInt: NaN,
   ageNow: NaN
 }
 
