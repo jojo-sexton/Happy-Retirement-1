@@ -5,7 +5,7 @@ import Nav from './Nav'
 import PingRoutes from './PingRoutes'
 import Registration from './Registration'
 import Users from './Users'
-import Main from './main/Main'
+import Main from './main/Home'
 import { Route } from 'react-router'
 
 function App () {
@@ -13,7 +13,7 @@ function App () {
 
   return (
     <div className='app'>
-      <Route path='/' component={Nav} />
+      <Route exact path='/' component={Nav} />
       <Route exact path='/' component={Users} />
       <Route exact path='/' component={PingRoutes} />
       <Route path='/register' component={Registration} />

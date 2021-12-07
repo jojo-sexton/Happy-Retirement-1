@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Main = () => {
+const Home = () => {
   return (
     <div>
-
+     When can I retire?
     </div>
   )
 }
 
-export default Main
+export default Home
