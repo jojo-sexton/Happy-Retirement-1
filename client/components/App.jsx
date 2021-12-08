@@ -35,10 +35,14 @@ function App () {
   const addSavings = (savings) => {
     setPlan({ ...plan, savings })
   }
-  const addSavings = (contribution) => {
-    setPlan({ ...plan, contritbution })
+
+  const addContribution = (contribution) => {
+    setPlan({ ...plan, contribution })
   }
- 
+
+  const addRoi = (roi) => {
+    setPlan({ ...plan, roi })
+  }
 
   return (
     <div className='app'>
@@ -49,14 +53,19 @@ function App () {
       <Route path='/savings' component={Savings} >
         <Savings plan={plan} addSavings={addSavings} />
       </Route>
-      
-      <Route path='/savings' component={Contribution} >
-        <Savings plan={plan} addSavings={addContribution} />
+
+      <Route path='/contribution' component={Contribution} >
+        <Contribution plan={plan} addContribution={addContribution}/>
       </Route>
 
+      <Route path='/roi' component={Roi} >
+        <Roi plan={plan} addRoi={addRoi} />
+      </Route>
 
-      <Route path='/roi' component={Roi} />
-      <Route path='/result' component={Result} />
+      <Route path='/result' component={Result} >
+        <Result plan={plan}/>
+      </Route>
+
       <Route exact path='/' component={Home} />
       {/* <Route path='/register' component={Registration} />
       <Route exact path='/' component={Nav} />

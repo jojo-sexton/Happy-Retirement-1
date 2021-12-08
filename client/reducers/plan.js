@@ -10,12 +10,5 @@ const emptyPlan = {
 }
 
 export default function plan (state = emptyPlan, action) {
-  switch (action.type) {
-    case ADD_SAVINGS:
-      return
-      { savings }
-
-    default:
-      return state
-  }
+  return state
 }
