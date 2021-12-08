@@ -1,4 +1,4 @@
-import {ADD_SAVINGS} from '../actions/plan'
+import { ADD_SAVINGS } from '../actions/plan'
 
 const emptyPlan = {
   lifestyle: NaN,
@@ -12,10 +12,10 @@ const emptyPlan = {
 export default function plan (state = emptyPlan, action) {
   switch (action.type) {
     case ADD_SAVINGS:
-    return 
-    {savings: savings}
+      return
+      { savings }
 
     default:
-    return state
+      return state
   }
 }

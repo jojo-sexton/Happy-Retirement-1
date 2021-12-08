@@ -1,18 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { addSavings } from '../../actions/plan'
 
-export default function Savings () {
-  const dispatch = useDispatch()
-
+export default function Savings ({ plan, addSavings }) {
   function submitSavings (e) {
+    console.log(e.keyCode)
+    console.log(e.target.value)
     if (e.keyCode === 13) {
-      const action = addSavings(e.target.value)
-      console.log(action)
-      dispatch(action)
+      addSavings(e.target.value)
     }
   }
+  console.log(plan)
   return (
     <div className='home container'>
       <h2>
@@ -24,13 +21,18 @@ export default function Savings () {
 
       <label className="input"> $
         <input
-          placeholder='Enter your savings'
+          id = "savings"
+          placeholder='Enter your savings here'
+          type='number'
+          name= "savings"
+          onKeyUp={submitSavings}
         />
+
       </label>
 
       <div>
         <Link to="/contribution">
-          <button onClick={submitSavings}>
+          <button>
               Next step
           </button>
         </Link>
