@@ -23,7 +23,7 @@ const Lifestyle = ({ addLifestyle, plan }) => {
   ]
   return (
     <div className='home container'>
-      <h2>Step 1 of 4: Choose your retirement lifestyle </h2>
+      <h2>Step 2 of 5: Choose your retirement lifestyle </h2>
       <ul>
         {lifestyles.map(lifestyle => {
           const { choice, spend } = lifestyle

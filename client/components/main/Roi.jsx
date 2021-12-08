@@ -12,7 +12,7 @@ const Roi = ({plan, addRoi}) => {
   return (
     <div className="home container">
       <h2>
-        Step 4 of 4: Enter the return of your retirement investment fund
+        Step 5 of 5: Enter the return of your retirement investment fund
       </h2>
       <form >
         <label > Enter the return (%) of your retirement investment fund per annum: </label>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Contribution ({plan, addContribution}) {
+export default function Contribution ({ plan, addContribution }) {
   function submitContribution (e) {
     if (e.keyCode === 13) {
       addContribution(e.target.value)
@@ -12,7 +12,7 @@ export default function Contribution ({plan, addContribution}) {
   return (
     <div className='home container'>
       <h3>
-        Step 3 of 4: Enter your retirement savings contributions
+        Step 4 of 5: Enter your retirement savings contributions
       </h3>
       <form >
         <label > Your contribution toward your retirement per annum: </label>

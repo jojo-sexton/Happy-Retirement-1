@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Result = ({ plan }) => {
-  const { lifestyle, savings, contribution, roi } = plan
+  const { lifestyle, savings, contribution, roi, ageNow } = plan
   console.log(lifestyle, savings, contribution, roi)
   const pmt = Number(contribution)
   const rate = Number(roi / 100)
@@ -12,7 +12,8 @@ const Result = ({ plan }) => {
   const phase2 = 1 + rate
   const log1 = Math.log(phase1)
   const log2 = Math.log(phase2)
-  const retirementAge = Math.floor(log1 / log2)
+  const age=Number(ageNow)
+  const retirementAge = Math.floor(log1 / log2) + age
 
 
   // const Nper = Log((Pmt/Rate - FV) / (Pmt/Rate + PV)) / Log(1+Rate)'

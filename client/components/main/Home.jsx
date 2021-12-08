@@ -8,7 +8,7 @@ const Home = () => {
         When can I retire?
       </h2>
       <p>This calculator gives you a snapshot of your retirement goals and how you're generally tracking towards them</p>
-      <Link to="/Lifestyle">
+      <Link to="/age">
         <button>
           {'Let\'s find out'}
         </button>

@@ -15,6 +15,7 @@ import Savings from './main/Savings'
 import Contribution from './main/Contribution'
 import Roi from './main/Roi'
 import Result from './main/Result'
+import Age from './main/Age'
 
 function App () {
   // cacheUser(useAuth0)
@@ -44,26 +45,34 @@ function App () {
     setPlan({ ...plan, roi })
   }
 
+  const addAge = (ageNow) => {
+    setPlan({ ...ageNow, ageNow })
+  }
+
   return (
     <div className='app'>
-      <Route path='/lifestyle' component={Lifestyle} >
+      <Route exact path='/lifestyle' component={Lifestyle} >
         <Lifestyle addLifestyle={addLifestyle} plan={plan} />
       </Route>
 
-      <Route path='/savings' component={Savings} >
+      <Route exact path='/savings' component={Savings} >
         <Savings plan={plan} addSavings={addSavings} />
       </Route>
 
-      <Route path='/contribution' component={Contribution} >
+      <Route exact path='/contribution' component={Contribution} >
         <Contribution plan={plan} addContribution={addContribution}/>
       </Route>
 
-      <Route path='/roi' component={Roi} >
+      <Route exact path='/roi' component={Roi} >
         <Roi plan={plan} addRoi={addRoi} />
       </Route>
 
-      <Route path='/result' component={Result} >
+      <Route exact path='/result' component={Result} >
         <Result plan={plan}/>
+      </Route>
+
+      <Route exact path='/age' component={Age} >
+        <Age plan={plan} addAge={addAge}/>
       </Route>
 
       <Route exact path='/' component={Home} />

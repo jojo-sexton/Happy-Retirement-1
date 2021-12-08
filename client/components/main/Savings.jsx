@@ -12,7 +12,7 @@ export default function Savings ({ plan, addSavings }) {
   return (
     <div className='home container'>
       <h2>
-        Step 2 of 4: Enter your current retirement savings balance
+        Step 3 of 5: Enter your current retirement savings balance
       </h2>
       <h3>
           Note if you're a couple, add a sum of both retirement balances
